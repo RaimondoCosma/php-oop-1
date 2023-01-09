@@ -8,7 +8,7 @@ class Movie {
     public $duration;
     public $releaseYear;
 
-    function __construct(string $_title, ?string $_subTitle, $_vote, array $_genre)
+    function __construct(string $_title, ?string $_subTitle, $_vote, $_genre)
     {
         $this->title = $_title;
         $this->subTitle = $_subTitle;
