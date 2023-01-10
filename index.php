@@ -25,6 +25,8 @@ require_once __DIR__ . "/db.php/main.php";
             </div>
             <h3>Durata: <?php echo $movie->duration ?></h3>
             <h3>Anno di uscita: <?php echo $movie->releaseYear ?></h3>
+            <h2>Plot:</h2>
+            <p><?php echo $movie->plot ?></p>
         </li>
         <?php } ?>
     </ul>
