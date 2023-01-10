@@ -13,42 +13,20 @@ require_once __DIR__ . "/db.php/main.php";
 <body>
     <h1>Lista di Film</h1>
     <ul>
+        <?php foreach($movies as $movie) { ?>
         <li>
-            <h2><?php echo $movie_1->title ?></h2>
-            <h3><?php echo $movie_1->subTitle ?></h3>
-            <h3>Votazione utenti: <?php echo $movie_1->vote ?></h3>
+            <h2><?php echo $movie->title ?></h2>
+            <h3><?php echo $movie->subTitle ?></h3>
+            <h3>Votazione utenti: <?php echo $movie->vote ?></h3>
             <div class="genre"><h3>Genere:</h3>
-                <?php foreach ($movie_1->genre as $key) { ?>
+                <?php foreach ($movie->genre as $key) { ?>
                     <span class="type"><?php echo $key->type . ',' ?></span>
                 <?php } ?>
             </div>
-            <h3>Durata: <?php echo $movie_1->duration ?></h3>
-            <h3>Anno di uscita: <?php echo $movie_1->releaseYear ?></h3>
+            <h3>Durata: <?php echo $movie->duration ?></h3>
+            <h3>Anno di uscita: <?php echo $movie->releaseYear ?></h3>
         </li>
-        <li>
-            <h2><?php echo $movie_2->title ?></h2>
-            <h3><?php echo $movie_2->subTitle ?></h3>
-            <h3>Votazione utenti: <?php echo $movie_2->vote ?></h3>
-            <div class="genre"><h3>Genere:</h3>
-                <?php foreach ($movie_2->genre as $key) { ?>
-                    <span class="type"><?php echo $key->type . ',' ?></span>
-                <?php } ?>
-            </div>
-            <h3>Durata: <?php echo $movie_2->duration ?></h3>
-            <h3>Anno di uscita: <?php echo $movie_2->releaseYear ?></h3>
-        </li>
-        <li>
-            <h2><?php echo $movie_3->title ?></h2>
-            <h3><?php echo $movie_3->subTitle ?></h3>
-            <h3>Votazione utenti: <?php echo $movie_3->vote ?></h3>
-            <div class="genre"><h3>Genere:</h3>
-                <?php foreach ($movie_3->genre as $key) { ?>
-                    <span class="type"><?php echo $key->type . ',' ?></span>
-                <?php } ?>
-            </div>
-            <h3>Durata: <?php echo $movie_3->duration ?></h3>
-            <h3>Anno di uscita: <?php echo $movie_3->releaseYear ?></h3>
-        </li>
+        <?php } ?>
     </ul>
 </body>
 </html>
